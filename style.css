@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(134, 227, 134);
+}
+/*
+Fonts selected with assistance from the following referenes
+https://www.w3schools.com/cssref/css_websafe_fonts.php
+https://www.cssfontstack.com/
+*/
+h1  {
+	font-family: tahoma, verdana, sans-serif;
+}
+p  {
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 20px;
+}
