@@ -1,15 +1,112 @@
 body {
-    background-color: rgb(134, 227, 134);
+	background-color: black;
 }
+
+/*
+Start layout code with example from Stack Exchange: https://stackoverflow.com/questions/29960458/making-a-simple-layout-with-a-sidebar-in-html-css
+*/
+.container {
+	height: 1000px; /*I was getting is issue with CV content being cutoff */
+	width: 100%;
+	display: grid;
+	grid-template-areas: "sidebar main";
+	grid-template-columns: 200px auto;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	height: 100%;
+	background-color: rgb(224, 156, 108);
+
+	/*display: flex;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	
+	border-right: 2px solid black;
+}
+
+.sidebar-links {
+	background-color: rgb(224, 156, 108);
+
+	position: sticky;
+	top: 250px;
+	height: 200px;
+	text-align: center;
+	
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.sidebar-links a{
+	color:rgb(23, 87, 40);
+	text-decoration: none;
+}
+.sidebar a.active {
+    color: rgb(97, 173, 97);
+}
+
+.main {
+	grid-area: main;
+	height: 100%;
+	background-color: rgb(134, 227, 134);
+}
+
 /*
 Fonts selected with assistance from the following referenes
 https://www.w3schools.com/cssref/css_websafe_fonts.php
 https://www.cssfontstack.com/
 */
-h1  {
+.main h1{
 	font-family: tahoma, verdana, sans-serif;
+	
+	margin-left: 20px;
 }
-p  {
+.main p{
 	font-family: "trebuchet MS", sans-serif;
 	font-size: 20px;
+	
+	margin-left: 40px;
+}
+
+.main a{
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 20px;
+}
+
+.main table{
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 18px;
+	
+	margin-left: 40px;
+	
+	border: 2px solid black;
+	border-collapse: collapse;
+}
+
+.main th, td{
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 18px;
+	
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 20px
+}
+
+.main pre{
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 18px;
+}
+
+.main hr{
+	/* Settings defined with assitance from Google / Gemini */
+	height: 4px;
+	background-color: black;
+	border: none;
+}
+
+#a2{
+	font-family: "trebuchet MS", sans-serif;
+	font-size: 20px;
+
+	margin-left: 40px;
 }
